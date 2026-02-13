@@ -63,33 +63,35 @@
                     <nav class="hidden md:flex items-center gap-9">
 
                         <a class="text-[#181111] dark:text-white text-sm font-medium hover:text-primary transition-colors"
-                            href="{{ route('finddoner') }}">Find Donar</a>
+                            href="{{ route('finddoner') }}">Find Donor</a>
+                        <a class="text-[#181111] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                            href="{{ route('team') }}">Team</a>
 
                         @auth
-                            <a class="text-[#181111] dark:text-white text-sm font-medium hover:text-primary transition-colors"
-                                href="{{ route('donateblood') }}">Donate now
-                            </a>
-                            <a class="text-[#181111] dark:text-white text-sm font-medium hover:text-primary transition-colors"
-                                href="{{ route('profile') }}">Profile</a>
+                        <a class="text-[#181111] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                            href="{{ route('donateblood') }}">Donate now
+                        </a>
+                        <a class="text-[#181111] dark:text-white text-sm font-medium hover:text-primary transition-colors"
+                            href="{{ route('profile') }}">Profile</a>
                         @endauth
                     </nav>
                     <div class="flex gap-2">
                         @auth
-                            <a href="{{ route('logout') }}"
-                                class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all">
-                                <span>Logout</span>
-                            </a>
+                        <a href="{{ route('logout') }}"
+                            class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all">
+                            <span>Logout</span>
+                        </a>
                         @else
-                            <div class="flex gap-2">
-                                <a href="{{ route('register') }}"
-                                    class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all">
-                                    <span>Sign Up</span>
-                                </a>
-                                <a href="{{ route('login') }}"
-                                    class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-[#f4f0f0] dark:bg-[#3d2424] text-[#181111] dark:text-white text-sm font-bold hover:bg-[#e6dbdb] dark:hover:bg-[#4d3030] transition-all">
-                                    <span>Login</span>
-                                </a>
-                            </div>
+                        <div class="flex gap-2">
+                            <a href="{{ route('register') }}"
+                                class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all">
+                                <span>Sign Up</span>
+                            </a>
+                            <a href="{{ route('login') }}"
+                                class="flex min-w-[84px] cursor-pointer items-center justify-center rounded-lg h-10 px-4 bg-[#f4f0f0] dark:bg-[#3d2424] text-[#181111] dark:text-white text-sm font-bold hover:bg-[#e6dbdb] dark:hover:bg-[#4d3030] transition-all">
+                                <span>Login</span>
+                            </a>
+                        </div>
                         @endauth
                     </div>
                 </div>
@@ -113,10 +115,12 @@
                     <div>
                         <h5 class="font-bold mb-6">Quick Links</h5>
                         <ul class="space-y-4 text-gray-400 text-sm">
-                            <li><a class="hover:text-primary transition-colors" href="#">Find Donor</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="{{ route('finddoner') }}">Find
+                                    Donor</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="{{ route('team') }}">Our Team</a>
+                            </li>
                             <li><a class="hover:text-primary transition-colors" href="#">Blood Banks</a></li>
                             <li><a class="hover:text-primary transition-colors" href="#">Emergency Request</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="#">NGO Partnership</a></li>
                         </ul>
                     </div>
                     <div>

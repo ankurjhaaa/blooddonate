@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/logout', function () {
     Auth::logout();
+
     return redirect()->route('home');
 })->name('logout');
 Route::get('/admin', function () {
@@ -18,3 +18,4 @@ Route::livewire('/requestform', 'pages::public.requestform')->name('requestform'
 Route::livewire('/donateblood', 'pages::public.donateblood')->name('donateblood');
 Route::livewire('/finddoner', 'pages::public.finddoner')->name('finddoner');
 Route::livewire('/profile', 'pages::public.profile')->name('profile');
+Route::livewire('/team', 'pages::public.team')->name('team');
